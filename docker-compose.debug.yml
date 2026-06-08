@@ -1,0 +1,10 @@
+services:
+  web:
+    container_name: "flask-api"
+    build: . 
+    ports:
+      - "5000:5000"
+      - "5678:5678"
+    volumes:
+      - .:/app
+    command: ["sh", "-c", "pip install debugpy && python -m debugpy --listen 0.0.0.0:5678 --wait-for-client -m flask run --no-debugger --no-reload --host 0.0.0.0 --port 5000"]
