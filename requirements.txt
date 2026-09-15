@@ -11,3 +11,5 @@ flask-jwt-extended
 flask-cors
 passlib
 Werkzeug==2.0.3
+SQLAlchemy==1.4.54
+Flask-SQLAlchemy==2.5.1
