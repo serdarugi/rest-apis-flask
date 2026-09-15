@@ -31,6 +31,7 @@ class ItemUpdateSchema(Schema):
     name = fields.Str()
     price = fields.Float()
     store_id = fields.Int()
+    store = fields.Str()
 
 class TagAndItemSchema(Schema):
     message = fields.Str()
