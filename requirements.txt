@@ -6,7 +6,7 @@ flask-sqlalchemy
 marshmallow
 marshmallow-sqlalchemy
 psycopg2-binary
-flask-migrate
+Flask-Migrate==4.0.7
 flask-jwt-extended
 flask-cors
 passlib

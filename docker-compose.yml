@@ -1,8 +1,25 @@
+version: '3.8'
 services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - "80:80"
     volumes:
       - .:/app
-
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=user
+    volumes:
+      - postgres_data:/var/lib/postgresql
+  
+volumes:
+  postgres_data:
